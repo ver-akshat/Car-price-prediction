@@ -1,0 +1,28 @@
+body {
+    background-color: hsl(293, 80%, 80%);
+    text-align: center;
+}
+
+.navbar {
+    background-color: #8bbde8;
+}
+
+a {
+    color: #c73f0a;
+}
+
+h1{
+    font-size: 30px;
+    font-style: italic;
+    font-style: oblique;
+}
+
+p {
+    text-align: center;
+    font-size: 28px;
+    color:crimson
+}
+
+a:hover {
+    color: #0e536e;
+  }

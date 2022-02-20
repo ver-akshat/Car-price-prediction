@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+<body>
+
+    <!-- Website Title -->
+  
+    <div class="container">
+      <h1 class='container-heading'><span class="heading_font">Car Price Predictor Webapp using Flask</span></h1>
+      <div class='description'>
+        <p>A Machine Learning Web Application that predicts price of cars in USD based on certain features of the car.</p><br>
+          <p>(Note:This model is 89.82% accurate)</p>
+      </div>
+    </div>
+  
+    <!-- Text Area -->
+    <div class="ml-container">
+      <a2>Please fill the parameters below and click on Selling Price button to check car price</a2>
+      <form action="\predict" method="post"> 
+  
+        <h3>Year</h3><input id="first" name="year" size=37 placeholder="eg. like '2014' " type ="number" >
+        <br>
+        <br>  
+        <h3>Horse-Power</h3><input id="second" name="hp" size=37 placeholder="Enter horsepower" type="number ">
+        <br>
+        <br>
+        <h3>Number of cylinders</h3><input id="third" size=37 name="no_of_cylinders" placeholder="Enter Number of cylinders"type="number ">
+        <br>
+        <br>
+        <h3>Transmission Type</h3><select name="transmission_type" id="trans">
+          <option value="manual">Manual Car</option>
+          <option value="automatic">Automatic Car</option>
+          <option value="automated_manual">Automatic-Manual Car</option>
+        </select>
+        <br>
+        <br>
+        <h3>Vehicle Size</h3><select name="vehicle_size" id="v_size">
+          <option value="compact">Compact</option>
+          <option value="midsize">MidSize</option>
+          <option value="large">Large</option>
+        </select>
+        <br>
+        <br>
+        <h3>Number of Doors</h3><input id="fourth" name="no_of_doors" size=37 placeholder="Enter Number of doors(2,3 or 4)"type="number ">
+        <br>
+        <br> 
+        <h3>Highway Milage</h3><input id="fifth" name="highway_mpg" size=37 placeholder="Enter highway milage"type="number ">
+        <br>
+        <br>
+        <h3>City Milage</h3><input id="sixth" name="city_mpg" size=37 placeholder="Enter City milage"type="number ">
+        <br>
+        <br>
+        <button id="sub" type="submit ">Selling Price</button>
+        </form>
+        <br>
+        <h3>{{ prediction_text }}<h3>
+        <br>
+    </div>
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
